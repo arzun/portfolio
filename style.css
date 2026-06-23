@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+}
+
+.container{
+    text-align:center;
+    margin-top:150px;
+}
+
+h1{
+    color:#215B63;
+    font-size:50px;
+}
+
+.designation{
+    font-size:22px;
+    color:#666;
+}
+
+button{
+    background:#215B63;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
