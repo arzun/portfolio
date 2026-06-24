@@ -9,7 +9,7 @@ const counters = document.querySelectorAll(".counter");
 
 const startCounters = () => {
 
-```
+
 counters.forEach(counter => {
 
     const target = +counter.getAttribute("data-target");
@@ -38,7 +38,7 @@ counters.forEach(counter => {
     updateCounter();
 
 });
-```
+
 
 };
 
@@ -47,16 +47,12 @@ counters.forEach(counter => {
 // ==========================================
 
 const observerOptions = {
-
-```
-threshold: 0.2
-```
-
+    threshold: 0.2
 };
 
 const observer = new IntersectionObserver((entries) => {
 
-```
+
 entries.forEach(entry => {
 
     if (entry.isIntersecting) {
@@ -66,7 +62,7 @@ entries.forEach(entry => {
     }
 
 });
-```
+
 
 }, observerOptions);
 
@@ -76,24 +72,24 @@ entries.forEach(entry => {
 
 const revealElements = document.querySelectorAll(
 
-```
+
 ".glass-card," +
 ".expertise-card," +
 ".project-card," +
 ".cert-card," +
 ".timeline-item," +
 ".metric-card"
-```
+
 
 );
 
 revealElements.forEach(element => {
 
-```
+
 element.classList.add("reveal");
 
 observer.observe(element);
-```
+
 
 });
 
@@ -107,7 +103,7 @@ let counterStarted = false;
 
 const metricsObserver = new IntersectionObserver((entries) => {
 
-```
+
 entries.forEach(entry => {
 
     if (entry.isIntersecting && !counterStarted) {
@@ -119,15 +115,15 @@ entries.forEach(entry => {
     }
 
 });
-```
+
 
 }, { threshold: 0.4 });
 
 if (metricsSection) {
 
-```
+
 metricsObserver.observe(metricsSection);
-```
+
 
 }
 
@@ -139,7 +135,7 @@ const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
 
-```
+
 if (window.scrollY > 50) {
 
     navbar.style.background =
@@ -157,7 +153,7 @@ if (window.scrollY > 50) {
         "none";
 
 }
-```
+
 
 });
 
@@ -173,13 +169,13 @@ document.querySelector(".nav-links");
 
 if (mobileMenu) {
 
-```
+
 mobileMenu.addEventListener("click", () => {
 
     navLinks.classList.toggle("show");
 
 });
-```
+
 
 }
 
@@ -190,13 +186,13 @@ mobileMenu.addEventListener("click", () => {
 document.querySelectorAll(".nav-links a")
 .forEach(link => {
 
-```
+
 link.addEventListener("click", () => {
 
     navLinks.classList.remove("show");
 
 });
-```
+
 
 });
 
@@ -211,7 +207,7 @@ document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
 
-```
+
 let current = "";
 
 sections.forEach(section => {
@@ -241,7 +237,7 @@ navItems.forEach(link => {
     }
 
 });
-```
+
 
 });
 
@@ -254,7 +250,6 @@ document.querySelector(".hexagon-wrapper");
 
 window.addEventListener("mousemove", (e) => {
 
-```
 if (!hexagon) return;
 
 const x =
@@ -265,7 +260,6 @@ const y =
 
 hexagon.style.transform =
     `translate(${x}px, ${y}px)`;
-```
 
 });
 
@@ -278,10 +272,10 @@ document.getElementById("year");
 
 if (yearElement) {
 
-```
+
 yearElement.innerText =
     new Date().getFullYear();
-```
+
 
 }
 
